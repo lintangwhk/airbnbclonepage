@@ -5,12 +5,14 @@ body{
     font-family: 'Open Sans', sans-serif;
     font-size: small;
     align-items: center;
+    display:flex;
+    flex-direction: column;
   }
   
   /* ------------------------app bar---------------------------------- */
 
 .navbar {
-    width: 100%;
+    width: calc(100% - 20px);
     height: 4em;
     padding: 10px;
     display: flex;
@@ -31,38 +33,6 @@ body{
 
 .home>img {
     width: 7em;
-}
-
-.user {
-    height: 3.5em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    border: 1px solid rgb(187, 187, 187);
-    width: 8em;
-    border-radius: 50px;
-}
-
-.language {
-    width: 8em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-}
-
-.signup {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    font-weight: bold;
-}
-
-.signup {
-    width: 10em;
-    color: black;
 }
 
   /* ------------------------search bar---------------------------------- */
@@ -109,7 +79,7 @@ body{
 .accomodation-bar {
     display: flex;
     flex-flow: row;
-    width: 80%;
+    width: 100%;
     height: 80px;
     overflow-x: scroll;
     overflow-y: hidden;
@@ -117,7 +87,8 @@ body{
 }
 
 .accomodation-navbar {
-    display:inline-block;      
+    display:inline-block;    
+    padding:0
 }
 
 .accomodation-navbar li{
@@ -130,6 +101,27 @@ body{
     width: 50px;
     height: 25px;
     border: 1px solid black;
+}
+
+.right-menu{
+    display:flex;
+    align-items: center;
+    margin:1em;
+}
+
+.right-menu > *{
+    padding:1em;
+    margin:.5em;
+}
+
+.right-menu *{
+    color:black;
+    text-decoration: none;
+}
+
+.user{
+    border-radius:3em;
+    border:1px solid grey
 }
 
 @media screen and (max-width: 800px) {
