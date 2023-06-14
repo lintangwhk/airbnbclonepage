@@ -140,8 +140,7 @@ body{
 
 .accomodation-box {
     width: 250px;
-    height: 320px;
-    margin: 50px;
+    height: 320px;   margin: 50px;
     border: 1px solid black;
 }
 
@@ -157,9 +156,46 @@ body{
     margin: 10px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1200px) {
     .logo-label {
         display: none;
+    }
+
+    .search-menu {
+        width: 100%;
+    }
+    
+@media screen and (max-width: 800px) {
+    .home {
+        display: none;
+    }
+
+    .right-menu {
+        display: none;
+    }
+
+    .search {
+        width: 100%;
+    }
+
+    .search-menu {
+        width: 100%;
+    }
+
+    .accomodation-bar {
+        width: 100%;
+    }
+
+    .filter {
+        display: none;
+    }
+
+    .paddle {
+        display: none;
+    }
+
+    .accomodation-list>* {
+        margin: 10px;
     }
     
 }
