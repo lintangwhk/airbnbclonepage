@@ -5,6 +5,8 @@ body{
     font-family: 'Open Sans', sans-serif;
     font-size: small;
     margin: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   /* ------------------------nav bar---------------------------------- */
@@ -13,20 +15,20 @@ header {
     position: sticky;
     top: 0;
     background-color: white;
-    filter: drop-shadow(0 0.1rem 0.2rem lightgray);
 }
 
 header>:not(hr) {
     padding: 1em 8em;
 }
 
-nav {   
+nav {
+    max-width: 100rem;
+    margin: 0 auto;
     padding: 1em;
     display: flex;
     flex-flow: row;
     align-items: center;
     justify-content: space-between;
-    align-content: center;
 }
 
 .home {
@@ -82,8 +84,9 @@ button {
   /* ------------------------sub-menu---------------------------------- */
 
 .box-outer {
+    max-width: 105rem;
+    margin: 0 auto;
     display: flex;
-    flex-flow: row;
     align-items: center;
 }
 
@@ -122,19 +125,31 @@ button {
 
 /* ------------------------accomodation list---------------------------------- */
 
+main {
+    max-width: 117rem;
+    margin: 0 auto;
+}
+
 .accomodation-list {
+    padding: 0;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     list-style: none;
 }
 
+.accomodation-container {
+    padding: 0 1em;
+}
+
 .content {
-    padding: 0 4em;
+    display: flex;
+    justify-content: center;
 }
 
 img {
-    width: 20em;
-    height: 20em;
+    width: 19em;
+    height: 19em;
+    border-radius: 1em;
 }
 
 footer {
@@ -270,7 +285,67 @@ footer>ul {
     }
     
 }
+
+@media screen and (max-width: 600px) {
+    .home {
+        display: none;
+    }
+
+    nav {
+        padding: 1em 2em !important; 
+    }
+
+    #signup {
+        display: none;
+    }
+
+    .search-menu {
+        width: 100%;
+    }
+
+    .search-menu span{
+        display: none;
+    }
+
+    .box-outer {
+        padding: 0 2em !important;
+    }
+
+    .box-inner li {
+        margin-right: 2em;
+    }
+
+    .filter {
+        border-radius: 100%
+    }
     
+    .filter>p{
+        display: none;
+    }
+
+    .paddle {
+        display: none;
+    }
+
+    .accomodation-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        padding: 1em;
+    }
+
+    .content {
+        padding: 0 0.5em;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    footer {
+        display: none;
+    }
+
 @media screen and (max-width: 375px) {
     .home {
         display: none;
